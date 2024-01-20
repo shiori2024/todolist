@@ -8,7 +8,7 @@
     "lint": "vue-cli-service lint",
     "commit": "git-cz && git push",
     "release": "release-it",
-    "changelog": "conventional-changelog -p custom-config -i CHANGELOG.md -s -r 0"
+    "changelog": "conventional-changelog -p custom-config -i CHANGELOG.md -s -r 0 -n ./changelog-option.js"
   },
   "repository": {
     "type": "git",

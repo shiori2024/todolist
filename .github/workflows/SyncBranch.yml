@@ -19,7 +19,6 @@ jobs:
             git config --global user.name 'github-actions[bot]'  
             git config --global user.email 'github-actions[bot]@users.noreply.github.com'  
             git checkout -B vue2 origin/vue2 || git checkout --orphan vue2  
-            rm -rf !(vue2|vue2/**)  
             git add vue2  
             git commit -m "Sync vue2 folder to vue2 branch"  
             git push origin vue2 --force  
@@ -31,7 +30,6 @@ jobs:
             git config --global user.name 'github-actions[bot]'  
             git config --global user.email 'github-actions[bot]@users.noreply.github.com'  
             git checkout -B vue3 origin/vue3 || git checkout --orphan vue3  
-            rm -rf !(vue3|vue3/**)  
             git add vue3  
             git commit -m "Sync vue3 folder to vue3 branch"  
             git push origin vue3 --force  

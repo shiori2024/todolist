@@ -23,4 +23,4 @@ jobs:
         with:  
           remote: 'origin'  
           branch: 'vue2'  
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.AUTO_PUSH }}

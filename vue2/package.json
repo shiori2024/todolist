@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "commit": "git-cz && git checkout vue2 && git push origin vue2",
+    "commit": "git-cz && git push origin vue2",
     "release": "release-it",
     "changelog": "conventional-changelog -p custom-config -i CHANGELOG.md -s -r 0"
   },

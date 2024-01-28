@@ -3,7 +3,7 @@
     <div id="app">
       <TodoListTitle :title="title"></TodoListTitle>
       <div class="container">
-        <FormInput :list="list" @addTodo="addTodo"></FormInput>
+        <FormInput @addTodo="addTodo"></FormInput>
         <TodoList :list="list" @delTodo="delTodo"></TodoList>
         <FooterTotal :list="list" @clear="clear"></FooterTotal>
       </div>
@@ -40,13 +40,14 @@ export default {
     }
   },
   methods: {
-    addTodo(newlist) {
-      this.list.push(newlist)
-      this.saveList()
+    addTodo(newTodo) {
+      this.list.push({
+        "id": this.list.length + 1,
+        "text": newTodo
+      })
     },
     delTodo(id) {
       this.list = this.list.filter(item => item.id !== id)
-      this.saveList()
     },
     clear() {
       this.list = []
@@ -60,6 +61,10 @@ export default {
   created() {
     // 数据持久化
     this.list = JSON.parse(localStorage.getItem('list')) || this.list
+  },
+  // 数据更新，重新渲染
+  updated() {
+    this.saveList()
   }
 }
 </script>

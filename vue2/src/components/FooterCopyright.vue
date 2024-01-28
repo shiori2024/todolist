@@ -1,8 +1,8 @@
 <template>
     <div class="container">
         <span>
-            <a href="https://github.com/shiori2024/todolist/tree/vue2">源代码</a>&nbsp;
-            &copy;{{ nowTime }}&nbsp;<a href="https://github.com/shiori2024">shiori2024</a>
+            <a href="https://github.com/shiori2024/todolist/tree/vue2" target="_blank">源代码</a>&nbsp;
+            &copy;{{ nowTime }}&nbsp;<a href="https://github.com/shiori2024" target="_blank">shiori2024</a>
         </span>
     </div>
 </template>

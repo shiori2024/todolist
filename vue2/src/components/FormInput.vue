@@ -7,7 +7,6 @@
   
 <script>
 export default {
-    props: ['list'],
     data() {
         return {
             newTodo: '',
@@ -17,11 +16,7 @@ export default {
     methods: {
         addTodo() {
             if (this.newTodo.trim()) {
-                this.newlist.push({
-                    id: this.newlist.length + 1,
-                    text: this.newTodo
-                })
-                this.$emit('addTodo', ...this.newlist)
+                this.$emit('addTodo', this.newTodo)
                 this.newTodo = ''
             } else {
                 alert('请输入任务')
